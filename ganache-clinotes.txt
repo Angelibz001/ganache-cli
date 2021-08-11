@@ -1,0 +1,25 @@
+"dato o nombre que pone el usuario "
+(informacion de algo)
+
+ganache-cli es para acceder a una blockchain local es como geth o parity pero no necesitas mineros, el tiempo es instantaneo,etc.
+en resumen es un client 
+
+
+1. installing package npm install -l o g ganache-cli
+2. en la terminal poner "ganache-cli"
+3. install web3 
+4. ganache-cli -h (host flag) "127.0.0.1" -p (port) "5000"
+5. ganache-cli -k (fork) "nombre del fork" -i (id) "700" -g (gas price) "20000000" -l (gas limit) (en hexadecimal) "0x0123" -b (block time en segundos) "15 "-t (cuando quieres que empiece la block chain en formato iso 8061) "formato" -a (number of addresses) "10" -e (number of eth) "100" -m (para poner la mnemonic con la que se quiere crear las cuentas) --acount = "private key, number of eth"
+6. ganache-cli -n (secure) -u (unlock) "0 (numero de la cuenta)"
+7. ganache-cli --db (database) (store the state of the block chain)
+8. ganache-cli -q (quiet mode) -v (verbose mode (request all the rpc)) -f (fork)
+9. ganache-cli -? (te dice todos los comandos)
+
+using infura
+1.Hacer cuenta en infura.io y luego hacer un proyecto en mainet y copiar la direccion del nodo
+1.5 Usar ethplorer para saber las tokens y los holders
+2. ganache-cli -f ("https:/infura") -u ("address de un token" (el -u es para hacer operaciones sin tener la private key))
+
+interactuando con el contrato en js
+1. importar web3 y abi.js 
+2.para copiar el abi se obtiene de etherscan en el contrato 
